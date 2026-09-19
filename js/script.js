@@ -14,7 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
             nome: document.getElementById('input-nome').value.trim(),
             email: document.getElementById('input-email').value.trim(),
             telefone: document.getElementById('input-telefone').value.trim(),
-            kit: document.getElementById('input-kit').value
+            kit: document.getElementById('input-kit').value,
+            senha: document.getElementById('input-senha').value
         };
 
         // Validação de e-mail
@@ -29,6 +30,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const apenasNumeros = dados.telefone.replace(/\D/g, '');
         if (apenasNumeros.length < 10 || apenasNumeros.length > 11) {
             mensagem.textContent = 'Digite um telefone válido, com DDD (ex: 31988887777).';
+            mensagem.style.color = 'red';
+            return;
+        }
+
+        // Validação da senha
+        if (dados.senha.length < 6) {
+            mensagem.textContent = 'A senha precisa ter pelo menos 6 caracteres.';
             mensagem.style.color = 'red';
             return;
         }

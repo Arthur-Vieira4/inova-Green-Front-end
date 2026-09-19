@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Compra - Inova Green</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/homepage.css">
+</head>
+<body>
+    <header>
+        <div class="cabeça">
+            <h1>
+                <a href="../index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 9px;">
+                    <svg class="marca-icone" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C7 2 3 6 3 11c0 5 4.5 9 9 11 4.5-2 9-6 9-11 0-5-4-9-9-9Z" fill="#1F6D3E"/>
+                    <path d="M13 6 8 13h3l-1 5 6-8h-3l1-4Z" fill="#F2B705"/>
+                </svg>
+                    INOVA GREEN
+                </a>
+            </h1>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="menu-nav">
+                <a href="Painel.html">Minha Conta</a>
+                <button id="botao-logout" class="botao-secundario" style="border:none; background:none; cursor:pointer;">Sair</button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="pagina-hero reveal">
+        <h1>Finalizar compra</h1>
+        <p>Confirme o kit e informe o endereço de entrega. Validamos seu CEP e CPF automaticamente.</p>
+    </div>
+
+    <div class="containercadastro">
+        <div class="cadastro reveal" style="max-width: 640px;">
+            <form id="form-compra" style="width: 100%;">
+                <label class="campo-label">Kit</label>
+                <select id="compra-kit" class="abaform" required>
+                    <option value="basico">Kit Básico - R$ 399,90</option>
+                    <option value="familia">Kit Família - R$ 499,90</option>
+                    <option value="pro">Kit Pro - R$ 699,90</option>
+                </select>
+
+                <label class="campo-label">Quantidade</label>
+                <input type="number" id="compra-quantidade" class="abaform" value="1" min="1" max="10" required>
+
+                <label class="campo-label">CPF</label>
+                <input type="text" id="compra-cpf" class="abaform" placeholder="000.000.000-00" required>
+                <p id="cpf-status" class="campo-status"></p>
+
+                <label class="campo-label">CEP</label>
+                <input type="text" id="compra-cep" class="abaform" placeholder="00000-000" required>
+                <p id="cep-status" class="campo-status"></p>
+
+                <div class="campo-grid">
+                    <div>
+                        <label class="campo-label">Rua</label>
+                        <input type="text" id="compra-rua" class="abaform" readonly>
+                    </div>
+                    <div>
+                        <label class="campo-label">Número</label>
+                        <input type="text" id="compra-numero" class="abaform" required>
+                    </div>
+                </div>
+
+                <label class="campo-label">Complemento (opcional)</label>
+                <input type="text" id="compra-complemento" class="abaform" placeholder="Apto, bloco, referência...">
+
+                <div class="campo-grid">
+                    <div>
+                        <label class="campo-label">Bairro</label>
+                        <input type="text" id="compra-bairro" class="abaform" readonly>
+                    </div>
+                    <div>
+                        <label class="campo-label">Cidade / UF</label>
+                        <input type="text" id="compra-cidade" class="abaform" readonly>
+                    </div>
+                </div>
+
+                <button type="submit" style="margin-top: 10px;">Confirmar pedido</button>
+                <p id="mensagem-compra"></p>
+                <p class="ja-tem-conta">
+                    O pagamento ainda não está integrado - seu pedido fica registrado como
+                    "aguardando pagamento" e entraremos em contato para combinar os próximos passos.
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/animacoes.js"></script>
+</body>
+</html>

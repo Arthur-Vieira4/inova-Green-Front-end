@@ -535,6 +535,31 @@ form p{
     min-height: 18px;
 }
 
+.campo-label{
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--cor-texto-suave);
+    margin-top: 4px;
+}
+
+.campo-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.campo-status{
+    font-size: 12px;
+    font-weight: 600;
+    margin: -6px 0 0 0;
+    min-height: 16px;
+}
+
+.abaform[readonly]{
+    background-color: rgb(243, 244, 236);
+    color: var(--cor-texto-suave);
+}
+
 /* ==================== KITS ==================== */
 .containerkits{
     width: 100%;
@@ -878,6 +903,98 @@ form p{
     font-size: 15.5px;
 }
 
+/* ==================== LOGIN ==================== */
+.login-box{
+    background-color: var(--cor-superficie);
+    max-width: 420px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px;
+    box-sizing: border-box;
+    border-radius: var(--raio);
+    box-shadow: var(--sombra-suave);
+    text-align: center;
+}
+
+.login-box h1{
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+.login-subtitulo{
+    color: var(--cor-texto-suave);
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+.login-box form{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ja-tem-conta{
+    margin-top: 22px;
+    font-size: 13.5px;
+    color: var(--cor-texto-suave);
+}
+
+.ja-tem-conta a{
+    color: var(--cor-marca);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* ==================== PAINEL DO CLIENTE ==================== */
+.painel-container{
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px 6% 80px 6%;
+}
+
+.painel-card{
+    background-color: var(--cor-superficie);
+    border-radius: var(--raio);
+    box-shadow: var(--sombra-suave);
+    padding: 10px 30px;
+}
+
+.painel-linha{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.painel-linha:last-child{
+    border-bottom: none;
+}
+
+.painel-label{
+    font-size: 13px;
+    color: var(--cor-texto-suave);
+    font-weight: 600;
+}
+
+.painel-valor{
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.painel-aviso{
+    background-color: var(--cor-marca-clara);
+    border-radius: var(--raio);
+    padding: 20px 24px;
+    margin-top: 24px;
+}
+
+.painel-aviso p{
+    color: var(--cor-marca-escura);
+    font-size: 14px;
+    margin: 0;
+}
+
 /* ==================== SOBRE NÓS ==================== */
 .sobrenos{
     max-width: 720px;
@@ -1214,5 +1331,19 @@ form p{
 
     .footer-links{
         gap: 30px;
+    }
+
+    .login-box{
+        padding: 30px 24px;
+    }
+
+    .painel-card{
+        padding: 6px 20px;
+    }
+
+    .painel-linha{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
     }
 }

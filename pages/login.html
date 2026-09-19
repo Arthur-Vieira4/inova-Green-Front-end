@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página não encontrada - Inova Green</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <title>Entrar - Inova Green</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <meta name="description" content="Acesse sua conta Inova Green para ver seus dados, ou entre como administrador.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="../css/homepage.css">
 </head>
 <body>
     <header>
         <div class="cabeça">
             <h1>
-                <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 9px;">
+                <a href="../index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 9px;">
                     <svg class="marca-icone" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 2C7 2 3 6 3 11c0 5 4.5 9 9 11 4.5-2 9-6 9-11 0-5-4-9-9-9Z" fill="#1F6D3E"/>
                     <path d="M13 6 8 13h3l-1 5 6-8h-3l1-4Z" fill="#F2B705"/>
@@ -28,29 +29,30 @@
                 <span></span>
             </button>
             <nav id="menu-nav">
-                <a href="pages/ComoFunciona.html">Como Funciona</a>
-                <a href="pages/Cadastro.html">Cadastro</a>
-                <a href="pages/Kits.html">Kits</a>
-                <a href="pages/FAQ.html">FAQ</a>
-                <a href="pages/Login.html">Login</a>
-                <a href="pages/SobreNos.html">Sobre Nós</a>
+                <a href="ComoFunciona.html">Como Funciona</a>
+                <a href="Cadastro.html">Cadastro</a>
+                <a href="Kits.html">Kits</a>
+                <a href="FAQ.html">FAQ</a>
+                <a href="Login.html">Login</a>
+                <a href="SobreNos.html">Sobre Nós</a>
                 <div class="appbutton">
-                    <a href="pages/AppDownload.html">APP</a>
+                    <a href="AppDownload.html">APP</a>
                 </div>
             </nav>
         </div>
     </header>
 
-    <div class="obrigado reveal">
-        <div class="obrigado-icone" style="background-color: var(--cor-accent); color: var(--cor-floresta); font-size: 18px; font-weight: 700;">404</div>
-        <h1>Essa página saiu da rede</h1>
-        <p>
-            O endereço que você tentou acessar não existe (ou mudou de lugar). Que tal voltar
-            pro início e continuar por lá?
-        </p>
-        <div class="teaser-botoes" style="justify-content: center; margin-top: 30px;">
-            <a href="index.html" class="botao-secundario">Voltar para o início</a>
-            <a href="pages/FAQ.html" class="botao-secundario">Ver perguntas frequentes</a>
+    <div class="containercadastro">
+        <div class="login-box reveal">
+            <h1>Entrar</h1>
+            <p class="login-subtitulo">Acesse sua conta ou, se você for o administrador, veja os cadastros recebidos.</p>
+            <form id="form-login">
+                <input type="email" id="login-email" class="abaform" placeholder="E-mail" required>
+                <input type="password" id="login-senha" class="abaform" placeholder="Senha" required>
+                <button type="submit">Entrar</button>
+                <p id="mensagem-login"></p>
+            </form>
+            <p class="ja-tem-conta">Ainda não tem conta? <a href="Cadastro.html">Cadastre-se</a></p>
         </div>
     </div>
 
@@ -63,15 +65,15 @@
             <div class="footer-links">
                 <div class="footer-coluna">
                     <h3>Produto</h3>
-                    <a href="pages/ComoFunciona.html">Como funciona</a>
-                    <a href="pages/Kits.html">Kits</a>
-                    <a href="pages/AppDownload.html">Aplicativo</a>
+                    <a href="ComoFunciona.html">Como funciona</a>
+                    <a href="Kits.html">Kits</a>
+                    <a href="AppDownload.html">Aplicativo</a>
                 </div>
                 <div class="footer-coluna">
                     <h3>Empresa</h3>
-                    <a href="pages/SobreNos.html">Sobre nós</a>
-                    <a href="pages/FAQ.html">Perguntas frequentes</a>
-                    <a href="pages/Cadastro.html">Cadastre-se</a>
+                    <a href="SobreNos.html">Sobre nós</a>
+                    <a href="FAQ.html">Perguntas frequentes</a>
+                    <a href="Cadastro.html">Cadastre-se</a>
                 </div>
             </div>
         </div>
@@ -81,6 +83,7 @@
         </div>
     </footer>
 
-    <script src="js/animacoes.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/animacoes.js"></script>
 </body>
 </html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Admin - Inova Green</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/homepage.css">
+</head>
+<body>
+    <header>
+        <div class="cabeça">
+            <h1>
+                <a href="../index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 9px;">
+                    <svg class="marca-icone" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C7 2 3 6 3 11c0 5 4.5 9 9 11 4.5-2 9-6 9-11 0-5-4-9-9-9Z" fill="#1F6D3E"/>
+                    <path d="M13 6 8 13h3l-1 5 6-8h-3l1-4Z" fill="#F2B705"/>
+                </svg>
+                    INOVA GREEN
+                </a>
+            </h1>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="menu-nav">
+                <button id="botao-logout" class="botao-secundario" style="border:none; background:none; cursor:pointer;">Sair</button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="pagina-hero reveal">
+        <h1>Painel administrativo</h1>
+        <p>Lista de todos os cadastros recebidos pelo site.</p>
+    </div>
+
+    <div class="comparacao-container reveal">
+        <p id="admin-status" style="text-align:center; color: var(--cor-texto-suave); margin-bottom: 16px;">Carregando cadastros...</p>
+        <table class="comparacao" id="admin-tabela" style="display:none;">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Telefone</th>
+                    <th>Kit</th>
+                    <th>Cadastrado em</th>
+                </tr>
+            </thead>
+            <tbody id="admin-tabela-corpo"></tbody>
+        </table>
+    </div>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/animacoes.js"></script>
+</body>
+</html>
