@@ -16,6 +16,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     elementosReveal.forEach((elemento) => observador.observe(elemento));
 
+    // ===== Marca o link ativo no menu (página atual) =====
+    const paginaAtual = window.location.pathname.split('/').pop() || 'index.html';
+
+    document.querySelectorAll('#menu-nav a').forEach((link) => {
+        const hrefLimpo = link.getAttribute('href').split('#')[0];
+        if (!hrefLimpo) return;
+        const paginaLink = hrefLimpo.split('/').pop();
+        if (paginaLink.toLowerCase() === paginaAtual.toLowerCase()) {
+            link.classList.add('ativo');
+        }
+    });
+
     // ===== Contador animado das estatísticas =====
     const numerosEstatisticas = document.querySelectorAll('.estatistica-numero');
 

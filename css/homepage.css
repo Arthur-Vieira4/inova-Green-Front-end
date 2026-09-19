@@ -150,10 +150,25 @@ nav a{
     font-size: 14px;
     font-weight: 500;
     transition: color 0.2s ease;
+    position: relative;
 }
 
 nav a:hover{
     color: var(--cor-marca-clara);
+}
+
+nav a.ativo{
+    color: var(--cor-accent);
+}
+
+nav a.ativo::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    height: 2px;
+    background-color: var(--cor-accent);
 }
 
 .appbutton{
@@ -1039,6 +1054,14 @@ form p{
     padding-top: 20px;
     border-top: 1px solid rgba(220, 235, 221, 0.12);
     font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.footer-credito{
+    color: rgba(220, 235, 221, 0.4);
+    order: 2;
 }
 
 /* ==================== EFEITOS DE ROLAGEM (REVEAL) ==================== */
@@ -1138,6 +1161,14 @@ form p{
         padding: 14px 6%;
         box-sizing: border-box;
         border-top: 1px solid rgba(220, 235, 221, 0.1);
+    }
+
+    nav a.ativo::after{
+        display: none;
+    }
+
+    nav a.ativo{
+        background-color: rgba(242, 183, 5, 0.08);
     }
 
     nav .appbutton{
