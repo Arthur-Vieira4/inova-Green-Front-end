@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perguntas Frequentes - Inova Green</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/homepage.css">
+</head>
+<body>
+    <header>
+        <div class="cabeça">
+            <h1>
+                <a href="../index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 9px;">
+                    <svg class="marca-icone" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C7 2 3 6 3 11c0 5 4.5 9 9 11 4.5-2 9-6 9-11 0-5-4-9-9-9Z" fill="#1F6D3E"/>
+                    <path d="M13 6 8 13h3l-1 5 6-8h-3l1-4Z" fill="#F2B705"/>
+                </svg>
+                    INOVA GREEN
+                </a>
+            </h1>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="menu-nav">
+                <a href="ComoFunciona.html">
+                    Como Funciona
+                </a>
+                <a href="Cadastro.html">
+                    Cadastro
+                </a>
+                <a href="Kits.html">
+                    Kits
+                </a>
+                <a href="FAQ.html">
+                    FAQ
+                </a>
+                <a href="SobreNos.html">
+                    Sobre Nós
+                </a>
+                <div class="appbutton">
+                    <a href="AppDownload.html">
+                        APP
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="pagina-hero reveal">
+        <h1>Perguntas frequentes</h1>
+        <p>
+            Tudo o que você precisa saber antes de se cadastrar.
+        </p>
+    </div>
+
+    <div class="containerfaq">
+        <div class="faq">
+            <details class="faq-item reveal">
+                <summary>Como funciona o sistema de monitoramento?</summary>
+                <p>
+                    Cada eletrônico é conectado a um módulo com placa Arduino e sensor de corrente
+                    ACS712. Esse módulo mede a corrente em tempo real e envia os dados via WiFi
+                    (ESP32) para o nosso servidor, que organiza tudo num dashboard único, acessível
+                    pela web e futuramente pelo app. Veja o passo a passo completo na página
+                    <a href="ComoFunciona.html">Como Funciona</a>.
+                </p>
+            </details>
+            <details class="faq-item reveal">
+                <summary>Preciso de conhecimento técnico para instalar?</summary>
+                <p>
+                    Não. O kit já vem com o módulo montado e as instruções de conexão. Você só
+                    precisa ligar o sensor ao eletrônico desejado e conectar o módulo à sua rede
+                    WiFi.
+                </p>
+            </details>
+            <details class="faq-item reveal">
+                <summary>Quantos eletrônicos posso monitorar?</summary>
+                <p>
+                    Depende do kit escolhido: o Kit Básico monitora 1 eletrônico, enquanto os Kits
+                    Família e Pro permitem monitorar múltiplos dispositivos ao mesmo tempo, todos
+                    sincronizados no mesmo painel. Veja a <a href="Kits.html">comparação completa
+                    entre os kits</a>.
+                </p>
+            </details>
+            <details class="faq-item reveal">
+                <summary>Existe alguma mensalidade além do kit?</summary>
+                <p>
+                    O acesso ao dashboard web e ao histórico de consumo está incluso na compra do
+                    kit, sem mensalidade. Qualquer cobrança recorrente futura, se vier a existir,
+                    será informada com clareza antes da compra.
+                </p>
+            </details>
+            <details class="faq-item reveal">
+                <summary>Quando o aplicativo estará disponível?</summary>
+                <p>
+                    O app está em desenvolvimento. Quem se cadastrar no site tem acesso antecipado
+                    assim que ele for lançado.
+                </p>
+            </details>
+        </div>
+    </div>
+
+    <div class="teaser-botoes reveal" style="padding-bottom: 60px; justify-content: center;">
+        <a href="Cadastro.html" class="botao-secundario">
+            Ainda com dúvidas? Cadastre-se e fale com a gente
+        </a>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-topo">
+            <div class="footer-marca">
+                <h2>Inova Green</h2>
+                <p>Monitoramento de energia elétrica em tempo real, eletrônico por eletrônico.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-coluna">
+                    <h3>Produto</h3>
+                    <a href="ComoFunciona.html">Como funciona</a>
+                    <a href="Kits.html">Kits</a>
+                    <a href="AppDownload.html">Aplicativo</a>
+                </div>
+                <div class="footer-coluna">
+                    <h3>Empresa</h3>
+                    <a href="SobreNos.html">Sobre nós</a>
+                    <a href="FAQ.html">Perguntas frequentes</a>
+                    <a href="Cadastro.html">Cadastre-se</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-linha">
+            © 2026 Inova Green. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script src="../js/animacoes.js"></script>
+</body>
+</html>

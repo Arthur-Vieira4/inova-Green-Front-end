@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como Funciona - Inova Green</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/homepage.css">
+</head>
+<body>
+    <header>
+        <div class="cabeça">
+            <h1>
+                <a href="../index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 9px;">
+                    <svg class="marca-icone" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C7 2 3 6 3 11c0 5 4.5 9 9 11 4.5-2 9-6 9-11 0-5-4-9-9-9Z" fill="#1F6D3E"/>
+                    <path d="M13 6 8 13h3l-1 5 6-8h-3l1-4Z" fill="#F2B705"/>
+                </svg>
+                    INOVA GREEN
+                </a>
+            </h1>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="menu-nav">
+                <a href="ComoFunciona.html">
+                    Como Funciona
+                </a>
+                <a href="Cadastro.html">
+                    Cadastro
+                </a>
+                <a href="Kits.html">
+                    Kits
+                </a>
+                <a href="FAQ.html">
+                    FAQ
+                </a>
+                <a href="SobreNos.html">
+                    Sobre Nós
+                </a>
+                <div class="appbutton">
+                    <a href="AppDownload.html">
+                        APP
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="pagina-hero reveal">
+        <h1>Como funciona o Inova Green</h1>
+        <p>
+            Do sensor até a tela do seu celular: veja o caminho que os dados do seu consumo de
+            energia percorrem, em tempo real.
+        </p>
+    </div>
+
+    <div class="fluxo">
+        <div class="fluxo-linha"></div>
+        <div class="fluxo-progresso"></div>
+
+        <div class="fluxo-etapa reveal">
+            <div class="fluxo-numero">1</div>
+            <div class="fluxo-texto">
+                <h2>Sensor ACS712 no eletrônico</h2>
+                <p>
+                    Cada aparelho que você quer monitorar recebe um sensor de corrente ACS712,
+                    instalado junto à sua fiação. Ele mede continuamente a corrente elétrica que
+                    passa pelo aparelho, sem interferir no seu funcionamento.
+                </p>
+            </div>
+        </div>
+
+        <div class="fluxo-etapa reveal">
+            <div class="fluxo-numero">2</div>
+            <div class="fluxo-texto">
+                <h2>Placa Arduino + ESP32 processam a leitura</h2>
+                <p>
+                    O sinal do sensor chega até a placa Arduino, que converte a leitura em um
+                    valor de corrente (em Amperes). O módulo ESP32 embutido cuida da parte de
+                    conectividade, preparando o dado para ser enviado.
+                </p>
+            </div>
+        </div>
+
+        <div class="fluxo-etapa reveal">
+            <div class="fluxo-numero">3</div>
+            <div class="fluxo-texto">
+                <h2>Envio via WiFi</h2>
+                <p>
+                    A cada poucos segundos, o módulo envia a leitura para o nosso servidor através
+                    da sua rede WiFi doméstica - sem precisar de cabos extras ou de estar perto do
+                    roteador.
+                </p>
+            </div>
+        </div>
+
+        <div class="fluxo-etapa reveal">
+            <div class="fluxo-numero">4</div>
+            <div class="fluxo-texto">
+                <h2>Servidor organiza e armazena</h2>
+                <p>
+                    Nosso back-end recebe os dados, organiza por dispositivo e horário, e guarda
+                    um histórico no banco de dados - criando a base para os gráficos e alertas.
+                </p>
+            </div>
+        </div>
+
+        <div class="fluxo-etapa reveal">
+            <div class="fluxo-numero">5</div>
+            <div class="fluxo-texto">
+                <h2>Dashboard na web e no app</h2>
+                <p>
+                    Você acompanha tudo num painel único, com o consumo de cada eletrônico em
+                    tempo real e o histórico ao longo do tempo, tanto pelo site quanto pelo
+                    aplicativo (em desenvolvimento).
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="teaser-botoes reveal" style="padding-bottom: 60px; justify-content: center;">
+        <a href="Cadastro.html" class="botao-secundario">
+            Quero me cadastrar
+        </a>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-topo">
+            <div class="footer-marca">
+                <h2>Inova Green</h2>
+                <p>Monitoramento de energia elétrica em tempo real, eletrônico por eletrônico.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-coluna">
+                    <h3>Produto</h3>
+                    <a href="ComoFunciona.html">Como funciona</a>
+                    <a href="Kits.html">Kits</a>
+                    <a href="AppDownload.html">Aplicativo</a>
+                </div>
+                <div class="footer-coluna">
+                    <h3>Empresa</h3>
+                    <a href="SobreNos.html">Sobre nós</a>
+                    <a href="FAQ.html">Perguntas frequentes</a>
+                    <a href="Cadastro.html">Cadastre-se</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-linha">
+            © 2026 Inova Green. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script src="../js/animacoes.js"></script>
+</body>
+</html>

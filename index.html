@@ -3,24 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inova Green</title>
+    <title>Inova Green - Monitoramento de energia em tempo real</title>
+    <meta name="description" content="Monitore o consumo de energia de cada eletrônico da sua casa em tempo real, com sensores Arduino/ESP32 e um dashboard simples.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Inova Green - Controle sua energia em tempo real">
+    <meta property="og:description" content="Monitore o consumo de energia de cada eletrônico da sua casa em tempo real, com sensores Arduino/ESP32 e um dashboard simples.">
+    <meta property="og:image" content="img/logoinova.png">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/homepage.css">
 </head>
 <body>
     <header>
         <div class="cabeça">
             <h1>
+                <svg class="marca-icone" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C7 2 3 6 3 11c0 5 4.5 9 9 11 4.5-2 9-6 9-11 0-5-4-9-9-9Z" fill="#1F6D3E"/>
+                    <path d="M13 6 8 13h3l-1 5 6-8h-3l1-4Z" fill="#F2B705"/>
+                </svg>
                 INOVA GREEN
             </h1>
-            <nav>
-                <a href="#sobre">
-                    Sobre
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="menu-nav">
+                <a href="pages/ComoFunciona.html">
+                    Como Funciona
                 </a>
-                <a href="#cadastro">
+                <a href="pages/Cadastro.html">
                     Cadastro
                 </a>
-                <a href="#adquirir">
-                    Adquirir
+                <a href="pages/Kits.html">
+                    Kits
+                </a>
+                <a href="pages/FAQ.html">
+                    FAQ
+                </a>
+                <a href="pages/SobreNos.html">
+                    Sobre Nós
                 </a>
                 <div class= "appbutton">
                     <a href="pages/AppDownload.html">
@@ -30,7 +57,7 @@
             </nav>
         </div>
     </header>
-    <div class="introducao">
+    <div class="introducao reveal">
         <div class="introtexto">
             <h1>
                 Conecte-se e <span class="controle">controle</span> sua energia em tempo real.
@@ -46,41 +73,58 @@
             </div>
         </div>
         <div class="fundoimg">
-            <picture>
-                <source media="(max-width: 600px)" srcset="img/logoinova.png">
-                <img src="img/logoinova.png" alt="Logo Inova Green">
-            </picture>
+            <svg class="medidor" viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Medidor de corrente elétrica">
+                <path d="M 40 180 A 120 120 0 0 1 280 180" fill="none" stroke="#DCE1D4" stroke-width="14" stroke-linecap="round"/>
+                <path d="M 40 180 A 120 120 0 0 1 160 62" fill="none" stroke="#1F6D3E" stroke-width="14" stroke-linecap="round"/>
+                <g stroke="#51624F" stroke-width="2">
+                    <line x1="40" y1="180" x2="52" y2="180"/>
+                    <line x1="62" y1="97" x2="73" y2="103"/>
+                    <line x1="160" y1="62" x2="160" y2="74"/>
+                    <line x1="258" y1="97" x2="247" y2="103"/>
+                    <line x1="280" y1="180" x2="268" y2="180"/>
+                </g>
+                <g class="medidor-agulha">
+                    <line x1="160" y1="180" x2="160" y2="80" stroke="#F2B705" stroke-width="4" stroke-linecap="round"/>
+                </g>
+                <circle cx="160" cy="180" r="12" fill="#10231A"/>
+                <text x="160" y="215" text-anchor="middle" font-family="Work Sans, Arial, sans-serif" font-size="13" fill="#51624F">Corrente em tempo real</text>
+            </svg>
         </div>
     </div>
     <div class="sobresis" id="sobre">
-        <h1 class="sobresish1">
+        <h1 class="sobresish1 reveal">
             Sobre o Sistema
         </h1>
         <div class="containersobresis">
-            <div class="modulo">
+            <div class="modulo reveal">
                 <h1>
                     Módulo Medidor
                 </h1>
                 <p>
-                    Cada dispositivo eletrônico conectado a uma placa Arduino com sensor de corrente ACS712.
+                    Sensor ACS712 conectado a cada eletrônico.
                 </p>
             </div>
-            <div class="sincronizacao">
+            <div class="sincronizacao reveal reveal-delay-1">
                 <h1>
                     Sincronização Total
                 </h1>
                 <p>
-                    Dashboard único na web e no app com todos os eletrônicos sincronizados, leitura agendada pelo usuário com histórico prolongado.
+                    Dashboard único, na web e no app.
                 </p>
             </div>
-            <div class="analise">
+            <div class="analise reveal reveal-delay-2">
                 <h1>
                     Análise Inteligente
                 </h1>
                 <p>
-                    Identifique picos de corrente, receba alertas e reduza desperdícios.
+                    Alertas de picos e economia de energia.
                 </p>
             </div>
+        </div>
+        <div class="teaser-botoes reveal">
+            <a href="pages/ComoFunciona.html" class="botao-secundario">
+                Ver como funciona em detalhes
+            </a>
         </div>
         <footer>
             <div class="sobresisfooter">
@@ -90,46 +134,31 @@
             </div>
         </footer>
     </div>
-    <div class="containercadastro" id="cadastro">
-        <div class="cadastro">
-            <div class="cadastrotexto">
-                <h1>
-                    Cadastre-se gratuitamente
-                </h1>
-                <p>
-                    Crie sua conta para acessar o monitoramento dos seus dispositivos e gerenciar sua rede de sensores. Após o cadastro, você poderá adquirir o kit completo com a placa Arduino e os módulos de medição.
-                </p>
-                <ul>
-                    <p>
-                        ✅ Dashboard interativo com gráficos
-                    </p>
-                    <p>
-                        ✅ Controle via APP e WEB
-                    </p>
-                </ul>
-            </div>
-            <form>
-                <input type="text" class="abaform" placeholder="Nome" required>
-                <input type="text" class="abaform" placeholder="E-mail" required>
-                <input type="text" class="abaform" placeholder="Telefone / WhatAapp" required>
-                <select class="abaform" placeholder="Selecione o Kit desejado" required>
-                    <option value="basico">Interesse: Kit Básico</option>
-                    <option value="familia">Interesse: Kit Família</option>
-                    <option value="pro">Interesse: Kit Pro</option>
-                </select>
-                <button type="submit">Cadastrar-se</button>
-                <p>
-                    Ao cadastrar, você concorda em receber novidades sobre o sistema de medição Arduino e acesso antecipado ao app.
-                </p>
-            </form>
+    <div class="estatisticas reveal">
+        <div class="estatistica">
+            <span class="estatistica-numero" data-target="3">0</span>
+            <p>Opções de kit disponíveis</p>
+        </div>
+        <div class="estatistica">
+            <span class="estatistica-numero" data-target="100" data-sufixo="%">0</span>
+            <p>Monitoramento em tempo real</p>
+        </div>
+        <div class="estatistica">
+            <span class="estatistica-numero" data-target="24" data-sufixo="/7">0</span>
+            <p>Alertas automáticos de consumo</p>
         </div>
     </div>
     <div class="containerkits" id="adquirir">
         <h1>
             Escolha seu kit
         </h1>
+        <div class="teaser-botoes reveal">
+            <a href="pages/Kits.html" class="botao-secundario">
+                Ver comparação completa entre os kits
+            </a>
+        </div>
         <div class="containerkits2">
-            <div class="escolhakit">
+            <div class="escolhakit reveal">
                 <h1>
                     Kit Básico
                 </h1>
@@ -140,12 +169,13 @@
                     R$ 399,90
                 </h2>
                 <button>
-                    <a href="#cadastro">
+                    <a href="pages/Cadastro.html">
                         Adquirir agora
                     </a>
                 </button>
             </div>
-            <div class="escolhakit">
+            <div class="escolhakit reveal reveal-delay-1 recomendado">
+                <span class="selo-recomendado">Mais escolhido</span>
                 <h1>
                     Kit Família
                 </h1>
@@ -156,12 +186,12 @@
                     R$ 499,90
                 </h2>
                 <button>
-                    <a href="#cadastro">
+                    <a href="pages/Cadastro.html">
                         Adquirir agora
                     </a>
                 </button>
             </div>
-            <div class="escolhakit">
+            <div class="escolhakit reveal reveal-delay-2">
                 <h1>
                     Kit Pro
                 </h1>
@@ -172,12 +202,51 @@
                     R$ 699,90
                 </h2>
                 <button>
-                    <a href="#cadastro">
+                    <a href="pages/Cadastro.html">
                         Adquirir agora
                     </a>
                 </button>
             </div>
         </div>
     </div>
+
+    <div class="containerfaq reveal">
+        <h1>
+            Ficou com dúvidas?
+        </h1>
+        <div class="teaser-botoes">
+            <a href="pages/FAQ.html" class="botao-secundario">
+                Ver perguntas frequentes
+            </a>
+        </div>
+    </div>
+    <footer class="site-footer">
+        <div class="footer-topo">
+            <div class="footer-marca">
+                <h2>Inova Green</h2>
+                <p>Monitoramento de energia elétrica em tempo real, eletrônico por eletrônico.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-coluna">
+                    <h3>Produto</h3>
+                    <a href="pages/ComoFunciona.html">Como funciona</a>
+                    <a href="pages/Kits.html">Kits</a>
+                    <a href="pages/AppDownload.html">Aplicativo</a>
+                </div>
+                <div class="footer-coluna">
+                    <h3>Empresa</h3>
+                    <a href="pages/SobreNos.html">Sobre nós</a>
+                    <a href="pages/FAQ.html">Perguntas frequentes</a>
+                    <a href="pages/Cadastro.html">Cadastre-se</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-linha">
+            © 2026 Inova Green. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/animacoes.js"></script>
 </body>
 </html>
